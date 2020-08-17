@@ -1,0 +1,30 @@
+// Theme overrides
+
+
+//Pages Components
+@import "../../../../@pages/styles/modules/_datepicker";
+@import "../../../../@pages/styles/modules/_timepicker";
+@import "../../../../@pages/styles/modules/_switch";
+
+//Pages Components Custom
+.input-group{
+	.form-control{
+		width: 100%;
+	}
+}
+
+.modal-zindex{
+	z-index: 1051 !important;
+}
+
+.backdrop-transparent{
+	background: rgba(0,0,0,0) !important;
+}
+
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info,
+.dataTables_paginate{
+	display: none !important;
+}

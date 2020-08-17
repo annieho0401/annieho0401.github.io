@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Detail -->
+    <title>WiiCo 智慧校園學習圈</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" href="assets/img/icon/60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icon/76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/icon/120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icon/152.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/icon/favicon.png" />
+
+    <!-- Other Link -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+    <!-- WiiCo CSS -->
+    <link class="main-stylesheet" href="pages/css/themes/corporate.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="fixed-header menu-behind menu-fix">
+
+
+    <!---------------------- Header ---------------------->
+    <!-- START HEADER -->
+    <!-- 進行中時，才需要加上"bg-complete2" -->
+    <div class="header no-border bg-complete2">
+        <div>
+            <!-- 只有在進行中按離開試卷的時候才會跳alert -->
+            <button class="btn btn-default" data-toggle="modal" data-target="#alert">離開試卷</button>
+            <span
+                class="title p-l-20 p-r-10 fs-14 hidden-sm-down">試卷：標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</span>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <span>作答時間倒數中：10:00</span>
+            <!-- <span>作答已結束</span> -->
+        </div>
+    </div>
+    <!-- END HEADER -->
+    <!-- START HEADER3 -->
+    <div class="header3">
+        <div class="container">
+            <div class="container-fluid p-t-5 p-b-5 fs-12">
+                作答進度：<span>1/4</span>
+                <!-- 作答進度：<span class="text-complete-dark bold">4/4</span> -->
+                <div class="progress b-rad-lg bg-master-lightest no-margin">
+                    <!-- 作答已結束時，progress-bar-complete-dark 請改用 progress-bar-grey -->
+                    <div class="progress-bar progress-bar-complete-dark" style="width: 25%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HEADER3 -->
+
+
+
+
+    <!---------------------- Container ---------------------->
+    <!-- START CONTAINER -->
+    <div class="container min-full-height m-t-50">
+        <!-- START CONTAINER FLUID -->
+        <div class="container-fluid p-t-60 p-b-100">
+            <div class="m-b-20 padding-20 bg-grey-l">
+                <label class="m-t-10 m-b-10">計算成績<span class="text-grey">｜滿分100分</span></label>
+                <div class="card">
+                    <div class="table-responsive" style="z-index: 500;">
+                        <!-- START TABLE -->
+                        <table id="basicTable-lightbox" class="table table-hover dataTable" cellspacing="0"
+                            width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="word-nowrap text-center sticky-left sticky-top sticky-line">題目</th>
+                                    <th class="word-nowrap text-center sticky-top">1</th>
+                                    <th class="word-nowrap text-center sticky-top">2</th>
+                                    <th class="word-nowrap text-center sticky-top">3</th>
+                                    <th class="word-nowrap text-center sticky-top">4</th>
+                                    <th class="word-nowrap text-center sticky-right sticky-top" style="width:64px;">總分
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        class="v-align-middle fs-12 text-grey word-nowrap text-center sticky-left sticky-line">
+                                        得分</td>
+                                    <td class="v-align-middle text-center">25</td>
+                                    <td class="v-align-middle text-center text-danger">0</td>
+                                    <td class="v-align-middle text-center">25</td>
+                                    <td class="v-align-middle text-center">20</td>
+                                    <td class="v-align-middle text-center fs-16 bold sticky-right">70</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <!-- END TABLE -->
+                    </div>
+                </div>
+            </div>
+            <div class="m-b-20 padding-20 bg-grey-l">
+
+                <div class="card no-border m-b-40">
+                    <div class="card-header">
+                        <div class="card-title">
+                            1.<span class="text-grey m-l-10">是非題｜25分</span>
+                        </div>
+                        <div class="card-controls">
+                            <span class="label label-complete2">無條件給分</span>
+                        </div>
+                    </div>
+                    <div class="padding-15">
+                        <p>光的波長介於 400 nm 至 700 nm 間，屬於不可視光</p>
+                        <div class="file-col cursor m-b-10">
+                            <img src="assets/img/test/header.jpg" class="img-cover inline"
+                                style="width:100px;height:100px;">
+                            <div class="info">
+                                <p class="m-b-30 overflow-ellipsis">參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案檔案.jpg</p>
+                                <p class="text-grey">(<span>4.03MB</span>)<span class="m-l-5">2018/01/19 12:00</span>
+                                </p>
+                            </div>
+                            <span class="btn-link top-right m-t-40 m-r-20"><i class="pg-download"></i></span>
+                        </div>
+                        <div class="m-t-15">
+                            <!-- 若考試時間到時，radio-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="radio radio-success no-margin">
+                                <input type="radio" value="LV7" name="radio6" id="radioChoice5-1"><label
+                                    for="radioChoice5-1" class="fs-14">A.<span
+                                        class="normal spacing-normal m-l-5">是</span></label>
+                            </div>
+                            <!-- 若考試時間到時，radio-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="radio radio-success no-margin">
+                                <input type="radio" value="LV7" name="radio6" id="radioChoice5-2"><label
+                                    for="radioChoice5-2" class="fs-14">B.<span
+                                        class="normal spacing-normal m-l-5">非</span></label>
+                            </div>
+                        </div>
+                        <!-- <div class="bg-grey padding-15 m-t-15">
+                          <p class="no-margin">正確解答：A</p> 
+                          <span class="text-grey fs-13 m-t-15">可見光（Visible light）是電磁波譜中人眼可以看見（感受得到）的部分。這個範圍中電磁輻射被稱為可見光，或簡單地稱為光。人眼可以感受到的波長範圍一般是落在390到700nm[1]。對應於這些波長的頻率範圍在430–790 THz。但有一些人能夠感知到波長大約在380到780nm之間的電磁波。正常視力的人眼對波長約為555nm的電磁波最為敏感，這種電磁波處於光學頻譜的綠光區域。</span>
+                          <div class="file-col cursor m-t-10">
+                              <img src="assets/img/test/header.jpg" class="img-cover inline" style="width:100px;height:100px;">
+                              <div class="info">
+                                  <p class="m-b-30 overflow-ellipsis">參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案檔案.jpg</p>
+                                  <p class="text-grey">(<span>4.03MB</span>)<span class="m-l-5">2018/01/19 12:00</span></p>
+                              </div>
+                              <span class="btn-link top-right m-t-40 m-r-20"><i class="pg-download"></i></span>                          
+                          </div>
+                      </div> -->
+                    </div>
+                </div>
+
+                <div class="card no-border m-b-40">
+                    <div class="card-header">
+                        <div class="card-title">
+                            2.<span class="text-grey m-l-10">單選題｜25分</span>
+                        </div>
+                        <!-- <div class="card-controls">
+                          <span class="label label-danger"><i class="fa fa-close fs-14"></i></span>
+                      </div> -->
+                    </div>
+                    <div class="padding-15">
+                        <p>下列有關色溫的敘述，何者不正確？</p>
+                        <div class="m-t-15">
+                            <!-- 若考試時間到時，radio-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="radio radio-success no-margin">
+                                <input type="radio" value="LV8" name="radio7" id="radioChoice6-1"><label
+                                    for="radioChoice6-1" class="fs-14">A.<span
+                                        class="normal spacing-normal m-l-5">色溫低者偏紅色光，色溫高者偏藍色光</span></label>
+                                <img src="assets/img/test/header.jpg" class="img-cover link cursor m-b-10 m-l-45"
+                                    style="width:100px;height:100px;">
+                            </div>
+                            <!-- 若考試時間到時，radio-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="radio radio-success no-margin">
+                                <input type="radio" value="LV8" name="radio7" id="radioChoice6-2"><label
+                                    for="radioChoice6-2" class="fs-14">B.<span
+                                        class="normal spacing-normal m-l-5">攝氏溫標與克式溫標的轉換公式為K=C+=273.15</span></label>
+                            </div>
+                            <!-- 若考試時間到時，radio-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="radio radio-success no-margin">
+                                <input type="radio" value="LV8" name="radio7" id="radioChoice6-3"><label
+                                    for="radioChoice6-3" class="fs-14">C.<span
+                                        class="normal spacing-normal m-l-5">接近於20W電燈泡光的色溫為3770K</span></label>
+                            </div>
+                            <!-- 若考試時間到時，radio-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="radio radio-success no-margin">
+                                <input type="radio" value="LV8" name="radio7" id="radioChoice6-4"><label
+                                    for="radioChoice6-4" class="fs-14">D.<span
+                                        class="normal spacing-normal m-l-5">D65是目前最具代表性的常用人工合成光源</span></label>
+                            </div>
+                        </div>
+                        <!-- <div class="bg-grey padding-15 m-t-15">
+                          <p class="no-margin">正確解答：C</p> 
+                          <span class="text-grey fs-13 m-t-15"></span>
+                      </div> -->
+                    </div>
+                </div>
+
+                <div class="card no-border m-b-40">
+                    <div class="card-header">
+                        <div class="card-title">
+                            3.<span class="text-grey m-l-10">複選題｜25分</span>
+                        </div>
+                        <!-- <div class="card-controls">
+                          <span class="label label-complete2"><i class="fa fa-check fs-14"></i></span>
+                      </div> -->
+                    </div>
+                    <div class="padding-15">
+                        <p>為尊重軟體智慧財產權，下列哪些是正確的觀念？(選擇二項)</p>
+                        <div class="m-t-15">
+                            <!-- 若考試時間到時，check-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="checkbox check-success checkbox-circle no-margin">
+                                <input type="checkbox" value="LV9" id="checkbox7-1"><label for="checkbox7-1"
+                                    class="fs-14">A.<span
+                                        class="normal spacing-normal m-l-5">可自行複製多份軟體，以方便內部使用，但不可攜出</span></label>
+                            </div>
+                            <!-- 若考試時間到時，check-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="checkbox check-success checkbox-circle no-margin">
+                                <input type="checkbox" value="LV9" id="checkbox7-2"><label for="checkbox7-2"
+                                    class="fs-14">B.<span class="normal spacing-normal m-l-5">可合法暫時性重製</span></label>
+                            </div>
+                            <!-- 若考試時間到時，check-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="checkbox check-success checkbox-circle no-margin">
+                                <input type="checkbox" value="LV9" id="checkbox7-3"><label for="checkbox7-3"
+                                    class="fs-14">C.<span
+                                        class="normal spacing-normal m-l-5">複製時應保密，勿於公開場合中進行</span></label>
+                            </div>
+                            <!-- 若考試時間到時，check-success拔掉，input區域增加disabled，label增加opacity-none -->
+                            <div class="checkbox check-success checkbox-circle no-margin">
+                                <input type="checkbox" value="LV9" id="checkbox7-4"><label for="checkbox7-4"
+                                    class="fs-14">D.<span class="normal spacing-normal m-l-5">應購買合法版權的軟體</span></label>
+                            </div>
+                        </div>
+                        <!-- <div class="bg-grey padding-15 m-t-15">
+                          <p class="no-margin">正確解答：B,D</p> 
+                          <span class="text-grey fs-13 m-t-15"></span>
+                      </div> -->
+                    </div>
+                </div>
+
+                <div class="card no-border m-b-40">
+                    <div class="card-header">
+                        <div class="card-title">
+                            4.<span class="text-grey m-l-10">簡答題｜25分</span>
+                        </div>
+                        <!-- <div class="card-controls">
+                          <span class="label label-complete2">20分</span>
+                      </div> -->
+                    </div>
+                    <div class="padding-15">
+                        <p>
+                            臉書（Facebook）已經成為當今最重要的社群網絡，甲為臉書用戶，某日發現其所拍攝並張貼的好友乙結婚的熱舞影片，被包括網友丙在內的眾多網友瘋狂轉載分享，甚至連丁電視台都拿來播放，此實為甲與乙始料未及，經查臉書的使用條款規定：「當您以『公開』設定發佈內容或資料時，即代表您允許所有人（包括Facebook以外的人士）存取或使用該資料，並且將之與您關聯在一起（例如，您的名字和大頭貼照）。您不會在Facebook張貼侵犯、違反他人權利或違反法律的內容或任何行動」。請從著作權法以及臉書使用條款的角度，分析說明下列問題：
+                            <br><br>
+                            (一)這支熱舞影片，甲和乙分別享有什麼權利？
+                            <br>
+                            (二)丙和丁在著作權法上涉及什麼行為？這些行為是否構成著作權侵害？
+                        </p>
+                        <textarea class="form-control m-t-30 m-b-20" id="text" placeholder="請輸入解答（至多2000字）"
+                            style="min-height: 100px;"></textarea>
+                        <div class="col-12 file-col cursor m-b-10 no-padding opacity">
+                            <img src="assets/img/test/header.jpg" class="img-cover inline"
+                                style="width:100px;height:100px;">
+                            <div class="info">
+                                <p class="m-b-30 overflow-ellipsis">參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案.jpg</p>
+                                <p class="text-grey">(<span>4.03MB</span>)</p>
+                            </div>
+                            <span class="btn-link top-right m-t-40 m-r-20"><i class="pg-close fs-16"></i></span>
+                        </div>
+                        <button type="button" class="btn btn-success"><i class="fa fa-plus m-r-5"></i>新增檔案</button>
+                        <!-- 若考試時間到時，textarea和button隱藏，並顯示以下資訊 -->
+                        <!-- <hr class="m-t-20 m-b-20">
+                      <p class="text-grey m-b-5">您的作答：</p>
+                       <p>
+                          所謂重製，指以印刷、複印、錄音、錄影、攝影、筆錄或其他方法直接、間接、永久或暫時之重複製作。於劇本、音樂著作或其他類似著作演出或播送時予以錄音或錄影；或依建築設計圖或建築模型建造建築物者，亦屬之。著作權法第3條第1項第5款定有明文。
+                      </p>
+                      <div class="file-col cursor m-b-10">
+                          <img src="assets/img/test/header.jpg" class="img-cover inline" style="width:100px;height:100px;">
+                          <div class="info">
+                              <p class="m-b-30 overflow-ellipsis">參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案檔案.jpg</p>
+                              <p class="text-grey">(<span>4.03MB</span>)<span class="m-l-5">2018/01/19 12:00</span></p>
+                          </div>
+                          <span class="btn-link top-right m-t-40 m-r-20"><i class="pg-download"></i></span>                          
+                      </div> -->
+                        <!-- <div class="bg-grey padding-15 m-t-15">
+                          <span class="text-grey fs-13 m-t-15">
+                              1.視聽著作：
+                              <br>
+                              依「著作權法第五條第一項各款著作內容例示」第2點第7款規定：「視聽著作：包括電影、錄影、碟影、電腦螢幕上顯示之影像及其他藉機械或設備表現系列影像，不論有無附隨聲音而能附著於任何媒介物上之著作。」依上開內容例示，甲所拍攝之好友乙結婚的熱舞影片係屬影像，為視聽著作。
+                              <br><br>
+                              2.舞蹈著作：
+                              <br>
+                              依上開內容例示第2點第3款規定：「戲劇、舞蹈著作：包括舞蹈、默劇、歌劇、話劇及其他之戲劇、舞蹈著作。」乙結婚的熱舞影片係乙本身自為之舞蹈，為舞蹈著作。
+                          </span>
+                      </div>
+                      <div class="bg-grey padding-15 m-t-15">
+                          <p class="no-margin">
+                              老師評語：我他媽的是老師評語歐。
+                          </p>
+                      </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END CONTAINER FLUID -->
+        <!-- START COPYRIGHT -->
+        <div class="container-fluid footer">
+            <div class="copyright sm-text-center">
+                <p class="small no-margin pull-left sm-pull-reset">
+                    <span class="hint-text">&copy; 華岡興業基金會 All Rights Reserved.</span>
+                    <span class="sm-block">
+                        <!-- <a class="m-l-10 m-r-10 cursor text-link" data-toggle="modal" data-target="#rating">意見回饋</a> <span class="muted">|</span> -->
+                        <a class="m-l-10 m-r-10 cursor text-link" data-toggle="modal"
+                            data-target="#feedback">問題回報</a><span class="muted">|</span>
+                        <a class="m-l-10 m-r-10 cursor text-link" href="service.html" target="blank">服務條款</a><span
+                            class="muted">|</span>
+                        <a class="m-l-10 cursor text-link" href="privacy.html" target="blank">隱私權政策</a></span>
+                    <a class="m-l-10 cursor text-grey" data-toggle="modal" data-target="#time-out">[作答結束]</a>
+                    <a class="m-l-10 cursor text-grey" data-toggle="modal" data-target="#time-goon">[繼續考試]</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- END COPYRIGHT -->
+    </div>
+    <!-- END CONTAINER -->
+
+
+
+    <!---------------------- Lightbox ---------------------->
+    <!-- BEGIN Add Activity -->
+    <div class="modal fade slide-up disable-scroll" id="rating" tabindex="-1" role="dialog"
+        aria-labelledby="modalSlideUpLabel" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content-wrapper">
+                <div class="modal-content">
+                    <!---->
+                    <div class="modal-header text-center bg-success-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"><i
+                                class="pg-close fs-16"></i></button>
+                        <span class="fs-16 m-b-15">意見回饋</span>
+                    </div>
+                    <!---->
+                    <div class="modal-body">
+                        <form id="form-rating" role="form">
+                            <div class="row no-margin p-t-20 p-b-20">
+                                <div class="col-12 form-group no-padding text-center">
+                                    <label class="fs-14 m-t-20 m-b-20">覺得我們的網站還不錯嗎^_^， 點一下星星來評分吧</label><br>
+                                    <i class="fa fa-star fa-2x col-2 col-md-1 inline cursor link text-warning"></i>
+                                    <i class="fa fa-star fa-2x col-2 col-md-1 inline cursor link text-warning"></i>
+                                    <i class="fa fa-star fa-2x col-2 col-md-1 inline cursor link text-warning"></i>
+                                    <i class="fa fa-star fa-2x col-2 col-md-1 inline cursor link text-master-light"></i>
+                                    <i class="fa fa-star fa-2x col-2 col-md-1 inline cursor link text-master-light"></i>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-default m-r-10" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-success">送出</button>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- END Add Activity -->
+
+
+    <!---------------------- Lightbox ---------------------->
+    <!-- BEGIN Add Activity -->
+    <div class="modal fade slide-up disable-scroll" id="feedback" tabindex="-1" role="dialog"
+        aria-labelledby="modalSlideUpLabel" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content-wrapper">
+                <div class="modal-content">
+                    <!---->
+                    <div class="modal-header text-center bg-success-header">
+                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal"><i
+                                class="pg-close fs-16"></i></button>
+                        <span class="fs-16 m-b-15">問題回報</span>
+                    </div>
+                    <!---->
+                    <div class="modal-body">
+                        <form id="form-rating" role="form">
+                            <div class="row no-margin p-t-20 p-b-20">
+                                <div class="col-12 form-group no-padding m-t-10">
+                                    <label>問題類型</label>
+                                    <div class="radio radio-success no-margin">
+                                        <input type="radio" value="課程相關" name="radio1" id="radioChoice1"
+                                            checked="checked"><label for="radioChoice1" class="fs-14">課程相關</label>
+                                        <input type="radio" value="帳號相關" name="radio1" id="radioChoice2"><label
+                                            for="radioChoice2" class="fs-14">帳號相關</label>
+                                        <input type="radio" value="使用體驗" name="radio1" id="radioChoice3"><label
+                                            for="radioChoice3" class="fs-14">使用體驗</label>
+                                        <input type="radio" value="其他" name="radio1" id="radioChoice4"><label
+                                            for="radioChoice4" class="fs-14">其他</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group no-padding m-t-20">
+                                    <label>問題描述</label>
+                                    <textarea class="form-control" id="text"
+                                        placeholder="若有任何使用上的問題，請在此留言告訴我們！"></textarea>
+                                </div>
+                                <div class="col-12 form-group no-padding m-t-20 m-b-40">
+                                    <label>Email（我們將透過此信箱回覆您的問題，回覆時間：週一～週五 10:00~15:00）</label>
+                                    <input type="email" class="form-control" placeholder="請輸入 Email 信箱">
+                                </div>
+                                <div class="col-12 file-col cursor m-b-10 no-padding opacity">
+                                    <img src="assets/img/test/header.jpg" class="img-cover inline"
+                                        style="width:100px;height:100px;">
+                                    <div class="info">
+                                        <p class="m-b-30 overflow-ellipsis">參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案.jpg
+                                        </p>
+                                        <p class="text-grey">(<span>4.03MB</span>)</p>
+                                    </div>
+                                    <span class="btn-link top-right m-t-40 m-r-20"><i class="pg-close fs-16"></i></span>
+                                </div>
+                                <div class="col-12 file-col cursor m-b-10 no-padding opacity">
+                                    <img src="assets/img/test/header.jpg" class="img-cover inline"
+                                        style="width:100px;height:100px;">
+                                    <div class="info">
+                                        <p class="m-b-30 overflow-ellipsis">參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案參考檔案.jpg
+                                        </p>
+                                        <p class="text-grey">(<span>4.03MB</span>)</p>
+                                    </div>
+                                    <span class="btn-link top-right m-t-40 m-r-20"><i class="pg-close fs-16"></i></span>
+                                </div>
+                                <button type="button" class="btn btn-success m-t-10"><i
+                                        class="fa fa-plus m-r-5"></i>上傳截圖</button>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-default m-r-10" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-success">送出</button>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- END Add Activity -->
+
+    <!---------------------- Lightbox ---------------------->
+    <!-- BEGIN Add Activity -->
+    <div class="modal fade slide-up disable-scroll" id="time-out" tabindex="-1" role="dialog"
+        aria-labelledby="modalSlideUpLabel" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm center-margin" style="width:200px;">
+            <div class="modal-content-wrapper">
+                <div class="modal-content">
+                    <!---->
+                    <div class="modal-body text-center m-t-25">
+                        <img src="assets/img/common_timeout.png" class="d48 m-b-10">
+                        <h5 class="no-margin">作答結束</h5>
+                        <!-- <p class="m-b-20">未完成作答<span class="m-l-5">(2/4)</span></p> -->
+                        <p class="m-b-20">已完成作答<span class="m-l-5 text-complete-dark bold">(4/4)</span></p>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">離開</button>
+                        <!-- <button type="button" class="btn btn-success" disabled>
+                    儲存中 <div class="progress-circle-indeterminate inline img-cover v-align-middle" style="width:15px; height:15px;background:url(./pages/img/progress/progress-circle-master.svg);"></div>
+                  </button>          -->
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- END Add Activity -->
+
+    <!---------------------- Lightbox ---------------------->
+    <!-- BEGIN Add Activity -->
+    <div class="modal fade slide-up disable-scroll" id="time-goon" tabindex="-1" role="dialog"
+        aria-labelledby="modalSlideUpLabel" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm center-margin" style="width:150px;">
+            <div class="modal-content-wrapper">
+                <div class="modal-content">
+                    <!---->
+                    <div class="modal-body text-center m-t-25">
+                        <img src="assets/img/common_testgoon.png" class="d48 m-b-10">
+                        <h5 class="no-margin">繼續考試</h5>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- END Add Activity -->
+
+
+    <!---------------------- Lightbox ---------------------->
+    <!-- BEGIN Add Activity -->
+    <div class="modal fade slide-up disable-scroll" id="alert" tabindex="-1" role="dialog"
+        aria-labelledby="modalSlideUpLabel" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content-wrapper">
+                <div class="modal-content">
+                    <!---->
+                    <div class="modal-header text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
+                                class="pg-close fs-14"></i></button>
+                    </div>
+                    <!---->
+                    <div class="modal-body m-t-20 text-center">
+                        <h5>離開試卷？</h5>
+                        <p class="m-b-20">距離作答結束還有<span class="bold">10:00</span>，作答結束前可隨時回來繼續作答。</p>
+                        <button type="button" class="btn btn-default m-r-10" data-dismiss="modal">繼續作答</button>
+                        <button type="button" class="btn btn-success">離開</button>
+                        <!-- <button type="button" class="btn btn-success" disabled>
+                        儲存中 <div class="progress-circle-indeterminate inline img-cover v-align-middle" style="width:15px; height:15px;background:url(./pages/img/progress/progress-circle-master.svg);"></div>
+                    </button> -->
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- END Add Activity -->
+
+
+
+    <!-- BEGIN VENDOR JS -->
+    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/tether/js/tether.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+    <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+    <script src="assets/plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- END VENDOR JS -->
+    <!-- BEGIN CORE TEMPLATE JS -->
+    <script src="pages/js/pages.min.js"></script>
+    <!-- END CORE TEMPLATE JS -->
+    <!-- BEGIN PAGE LEVEL JS -->
+    <script src="assets/js/scripts.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL JS -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,IAAI;EACV,GAAG,EAAE,IAAI;EACT,OAAO,EAAE,CAAC;CACV;;AACD,AAAA,oBAAoB,CAAC,aAAa,CAAC;EAC/B,IAAI,EAAE,IAAI;EACV,GAAG,EAAE,IAAI;CACZ;;AACD,MAAM,EAAE,SAAS,EAAE,KAAK;EACvB,AAAA,aAAa,CAAC;IACb,IAAI,EAAE,IAAI;GACV;;;AAEF,AAAA,QAAQ,CAAA;EACJ,MAAM,EAAE,eAAe;CAC1B",
+    "sources": [
+        "ngx-google-map.scss"
+    ],
+    "names": [],
+    "file": "ngx-google-map.css"
+}

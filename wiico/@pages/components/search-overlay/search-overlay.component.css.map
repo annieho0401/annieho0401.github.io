@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "search-overlay.component.scss"
+    ],
+    "names": [],
+    "file": "search-overlay.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IACX;CAAC",
+    "sources": [
+        "menu-icon.component.scss"
+    ],
+    "names": [],
+    "file": "menu-icon.component.css"
+}

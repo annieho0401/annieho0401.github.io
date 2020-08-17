@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AG2BA,8BAA8B,CAA9B,YAA8B",
+    "sources": [
+        "core.scss",
+        "_color.scss",
+        "_mixins.scss",
+        "modules/_z_index.scss",
+        "_var.scss"
+    ],
+    "names": [],
+    "file": "core.css"
+}
