@@ -1,0 +1,38 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Heiti TC", "微軟正黑體", "Microsoft JhengHei", Segoe UI, Roboto;
+$font-family-monospace:  "Heiti TC", "微軟正黑體", "Microsoft JhengHei", Segoe UI, Roboto;
+
+// 定義主色調
+$theme-colors: (
+  "master": #231815
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// focus no blue line
+*:focus {
+    outline: none !important;
+}
+
+//Disabled
+button {
+  &.disabled,
+  &:disabled{
+    cursor: not-allowed !important;
+
+  }
+}
+  
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+/* form-control */
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+}
+
+/* link */
+
+a:hover {
+    text-decoration:none;
+    opacity: .8;
+}
+
+/* container-min & header-logo */
+
+.header-logo{
+    width:150px;
+}
+.icon-btn{
+    max-width: 80px;
+}
+
+@media (min-width: 768px) {
+    .container-min {
+        max-width: 720px;
+    }
+    .header-logo{
+        width:180px;
+    }
+    .icon-btn{
+        max-width: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-min {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-min {
+        max-width: 720px;
+    }
+}
