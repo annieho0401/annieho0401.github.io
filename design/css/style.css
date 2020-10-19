@@ -21,6 +21,9 @@ a:hover {
 .icon-btn{
     max-width: 80px;
 }
+.container p{
+    font-size: 0.8rem;
+}
 
 @media (min-width: 768px) {
     .container-min {
@@ -31,6 +34,9 @@ a:hover {
     }
     .icon-btn{
         max-width: 120px;
+    }
+    .container p{
+        font-size: 1rem;
     }
 }
 
