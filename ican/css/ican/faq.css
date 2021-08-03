@@ -1,0 +1,119 @@
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+	background-color:#5bc289;
+}
+/*====== Transform ======*/
+.turn{
+	transform:rotate(90deg);
+}
+.collapse-transform{
+	transition:all 0.3s;		/* 不支援IE與Opera瀏覽器 */
+	-moz-transition:all 0.3s;	/* Firefox 使用的語法 */
+	-webkit-transition:all 0.3s;	/* Chrome、Safari 使用的語法 */
+}
+#faq .panel-title.focus-color{
+	color:#5bc289;
+}
+/*====== NAV ======*/
+.navbar.navbar-fix .topNavLogo {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+.navbar-default.navbar-fix {
+	background-color: #5bc289;
+	box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.navbar-default.navbar-fix .navbar-brand {
+	font-size: 1.5em;
+	color: #fff;
+}
+@media(min-width:768px) {
+.navbar-default.navbar-fix {
+	padding: 10px 0;
+}
+}
+/*====== FAQ ======*/
+#faq{
+	padding: 60px 0;
+}
+#faq .app-label{
+	padding: 2px 6px;
+	margin:0 3px;
+    border-radius: 20px;
+	font-size: 12px;   
+    color: #fff;
+	background-color: #a1db83;    	
+}
+#faq .web-label{
+	padding: 2px 6px;
+	margin:0 3px;
+    border-radius: 20px;
+	font-size: 12px;   
+    color: #fff;
+	background-color: #fad44c;    	
+}
+#faq .title{
+	color: #fff;
+    padding-bottom: 20px;
+}
+#faq .panel-default{
+	background-color:#fff;
+}
+#faq .panel{
+	margin-bottom: 0px;
+	padding: 0 15px;
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#faq .panel-group .panel+.panel{
+	margin-top: 0px;
+}
+#faq .panel-group .panel-heading{
+	border-bottom:#ddd solid 1px;
+}
+#faq .panel-default>.panel-heading {
+	padding: 20px 15px;
+	background-color: #fff;
+	cursor:pointer;
+}
+#faq .fa.arrow-style{
+	float:left;
+	color:#5bc289;
+	font-size:18px;
+	font-weight:bold;
+}
+#faq .panel-title{
+	color:#333;
+	line-height:1.5;
+	margin:-3px 0 0 20px;
+}
+#faq .panel-body{
+	padding-left: 36px;
+	border-top:none;
+	border-bottom:#ddd solid 1px;
+}
+@media(min-width:768px) {
+#faq{
+	padding: 80px 0;
+}
+}
+
+
+
+
+
+
+
+
+
+

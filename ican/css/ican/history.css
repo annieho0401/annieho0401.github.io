@@ -1,0 +1,145 @@
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+	background-color: #5bc289;
+}
+/*====== NAV ======*/
+.navbar.navbar-fix .topNavLogo {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+.navbar-default.navbar-fix {
+	background-color: #5bc289;
+	box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.navbar-default.navbar-fix .navbar-brand {
+	font-size: 1.5em;
+	color: #fff;
+}
+
+@media(min-width:768px) {
+.navbar-default.navbar-fix {
+	padding: 10px 0;
+}
+}
+/*====== HISTORY ======*/
+#history {
+	padding: 0;
+}
+/*---*/
+#history .main-tag {
+	display: block;
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	z-index: 999;
+	padding: 16px;
+	background-color: #5bc289;
+}
+#history .tag {
+	float: left;
+	width: 50%;
+	padding: 6px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #49a16e;
+}
+#history #left-tag {
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
+}
+#history #right-tag {
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+}
+#history .tag:hover, #history .tag:focus {
+	background-color: #398758;
+}
+/*---*/
+#history #ios-unit, #history #android-unit {
+	padding-top: 120px;
+}
+#history .title {
+	color: #fff;
+}
+#history .unit {
+	display: table;
+	width: 100%;
+	padding-right: 10px;
+	border-left: #ade1c4 solid 2px;
+}
+#history .time-line {
+	display: table-cell;
+	vertical-align: middle;
+	color: #ade1c4;
+}
+#history .time-line .fa-circle {
+	margin-left: -5.5px;
+	font-size: xx-small;
+}
+#history .dialog {
+	display: table;
+	margin: 15px;
+	width: 100%;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+#history .dialog .fa-caret-left {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+	font-size: large;
+	text-align: right;
+	width: 10px;
+}
+#history .dialog .text {
+	min-width: 100%;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+#history .dialog .text h5 {
+	line-height: 22px;
+}
+#history .dialog .text .txt {
+	color: #999;
+}
+/*----------------ul樣式-------------------*/
+
+#history ul {
+	list-style: disc;
+	margin-top: -10px;
+	padding-left: 20px;
+	padding-top: 0;
+	line-height: 22px;
+}
+
+/*---------------ul樣式結束--------------------*/
+
+
+
+
+@media(min-width:768px) {
+#history {
+	padding: 80px 0;
+}
+#history .main-tag {
+	display: none;
+}
+#history #ios-unit, #history #android-unit {
+	padding-top: 0px;
+}
+#history .unit {
+	width: 90%;
+}
+#history .dialog .text {
+	min-width: 90%;
+}
+}

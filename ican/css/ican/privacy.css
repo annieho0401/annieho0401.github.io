@@ -1,0 +1,56 @@
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+/*====== NAV ======*/
+.navbar.navbar-fix .topNavLogo {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+.navbar-default.navbar-fix {
+	background-color: #5bc289;
+	box-shadow: 0 3px 10px rgba(0,0,0,0);
+}
+.navbar-default.navbar-fix .navbar-brand {
+	font-size: 1.5em;
+	color: #fff;
+}
+@media(min-width:768px) {
+.navbar-default.navbar-fix {
+	padding: 10px 0;
+}
+}
+
+/*====== Privacy ======*/
+#privacy{
+	margin-top: 0px;
+}
+#privacy .text-highlight{
+	font-weight: bold;
+	color: #5bc289;
+}
+@media(min-width:768px) {
+#privacy{
+	margin-top: 30px;
+}
+}
+
+/*============*/
+.m-t-b-10{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.block{
+	display: block;
+}
+
+
+
+
+
