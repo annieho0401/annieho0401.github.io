@@ -16,9 +16,6 @@
         height: 3px;
     }
 }
-.progress.bg-master-lightest{
-    background-color: $color-master-lightest;
-}
 /* Circular Progress : indeterminate color
 ------------------------------------
 */
@@ -82,10 +79,6 @@
     background-color: $color-complete;
     background-image: none;
 }
-.progress-bar-complete-dark {
-    background-color: $color-complete2;
-    background-image: none;
-}
 .progress-bar-success {
     background-color: $color-success;
     background-image: none;
@@ -108,10 +101,6 @@
 }
 .progress-bar-black {
     background-color: $color-black;
-    background-image: none;
-}
-.progress-bar-grey {
-    background-color: $color-master-5;
     background-image: none;
 }
 .progress-info .bar, .progress .bar-info {

@@ -166,7 +166,6 @@
   right:0 !important;
   background: #fff;
   padding: 0;
-  min-width: 10rem;
   &:before {
     position: absolute;
     top: -7px;
@@ -185,7 +184,7 @@
     right: 16px;
     display: inline-block;
     border-right: 6px solid transparent;
-    border-bottom: 6px solid $color-success-light;
+    border-bottom: 6px solid #ffffff;
     border-left: 6px solid transparent;
     content: '';
   }
@@ -205,27 +204,6 @@
       margin-top: 5px;    
       // padding-bottom: 3px !important;
       // padding-top: 3px;
-    }
-  }
-  .profile-content{
-    &:hover{
-      background-color: $color-white;
-    }
-    .unit-header{
-      height: 45px;
-      background-color: $color-success-light;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-      margin: -10px -20px -20px -20px;
-    }
-    .img-cover{
-      width: 45px; 
-      height: 45px;
-      border-radius: 45px;
-      border: 3px solid #fff; 
-    }
-    .word-normal{
-      line-height: 16px;
     }
   }
 }
@@ -341,27 +319,6 @@
 .scroll-x-hidden{
   overflow-x: hidden !important;
 }
-.opacity-3{
-  opacity: .3;
-}
-.opacity-4{
-  opacity: .4;
-}
-.opacity-5{
-  opacity: .5;
-}
-.opacity-6{
-  opacity: .6;
-}
-.opacity-7{
-  opacity: .7;
-}
-.opacity-8{
-  opacity: .8;
-}
-.opacity-none{
-  opacity: 1 !important;
-}
 
 /* Generic Padding Helpers
 ------------------------------------
@@ -389,10 +346,6 @@
       }
     }
   }
-}
-
-.p-r-285{
-  padding-right: 285px;
 }
 
 @include generate-paddings-options(20);
@@ -821,9 +774,4 @@
         display:table-cell !important;
         float:none !important;
     }
-}
-.justify-center{
-   display:flex;
-   align-items:center;
-   justify-content:center;
 }

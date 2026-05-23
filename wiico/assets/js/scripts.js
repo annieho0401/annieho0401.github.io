@@ -29,47 +29,46 @@ $('[data-pages="search"]').search({
 });
 })
 
+// 互動頁開關(互動頁按鈕)
+$(function () {
+$(".chat-icon, #chat-close").click(function() {
+   $(".page-container").toggleClass("p-r-0");
+   $(".header2").toggleClass("p-r-0");
+   $(".card-upload").toggleClass("fix-r-0");
+});
+});
 
-// 側選單針對螢幕大小顯示
-// function windowSize() {
-// if ($(window).width() < 992) {
-//     $("body").removeClass("sidebar-open");
-//     $(".page-sidebar").removeClass("visible");
-// } else {
-//     $("body").addClass("sidebar-open");
-//     $(".page-sidebar").addClass("visible");
-// }
-// };
-// $(window).resize(function() {
-// windowSize();
-// });
-// windowSize();
-
-
-// 互動頁針對螢幕大小顯示
+// 互動頁&側選單針對螢幕大小顯示
 function windowSize() {
-if ($(window).width() > 1200) {
-    $(".chat-icon, #chat-close").on("click touchstart", function() {
-        $(".page-container").toggleClass("p-r-0");
-        $(".header2").toggleClass("p-r-0");
-        $(".card-upload").toggleClass("fix-r-0");
-    });
-    $(".quickview-wrapper").addClass("open");
-    $(".page-container").addClass("p-r-285");
-    $(".header2").addClass("p-r-285");
-    $(".card-upload").addClass("fix-r-285");
-} 
+if ($(window).width() < 1183) {
+    $("#quickview").removeClass("open");
+    $(".card-upload").addClass("fix-r-0");
+} else {
+    $("#quickview").addClass("open");
+    $(".page-container").removeClass("p-r-0");
+    $(".header2").removeClass("p-r-0");
+    $(".card-upload").removeClass("fix-r-0");
+}
+if ($(window).width() < 992) {
+    $("body").removeClass("sidebar-open");
+    $(".page-sidebar").removeClass("visible");
+} else {
+    $("body").addClass("sidebar-open");
+    $(".page-sidebar").addClass("visible");
+}
 };
+$(window).resize(function() {
+windowSize();
+});
 windowSize();
 
-
 // RWD的漢堡開關
-// $(function () {
-// $(".btn-sidebar").click(function() {
-//    $("body").toggleClass("sidebar-open");
-//    $(".page-sidebar").toggleClass("visible");
-// });
-// });
+$(function () {
+$(".btn-sidebar").click(function() {
+   $("body").toggleClass("sidebar-open");
+   $(".page-sidebar").toggleClass("visible");
+});
+});
 
 // 全選or全不選
 function check_all(obj,cName) { 
@@ -104,6 +103,5 @@ const like = document.getElementById('like-icon')
       like.addEventListener('click', (event) => {
       like.classList.toggle('like-select');
 })
-
 
 

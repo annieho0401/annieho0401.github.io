@@ -90,13 +90,6 @@ $alert-list-height:45px;
             font-size: 10px;
 		}
 	}
-	.chat-bubble-content{
-		&:hover{
-			.dropdown{
-				display: block !important;
-			}
-		}
-	}
 	.chat-bubble{
 		position:relative;
 		border-radius:20px;
@@ -104,7 +97,7 @@ $alert-list-height:45px;
 		font-size: 14px;
 		line-height: 22px;
 		margin: 5px 0 0 5px;
-		max-width: 80%;
+		max-width: 85%;
 		white-space: normal;
 		word-break: break-all;
 		& > p{
@@ -127,20 +120,6 @@ $alert-list-height:45px;
                 line-height:16px;
                 color: $color-master-5; 
 			}
-			.dropdown{
-				display: none;
-				position: absolute;
-				bottom: -2px;
-				left: -55px;
-				color: $color-master-6;
-				&:hover{
-					color: $color-master;
-				}
-			}
-			.dropdown-menu{
-				left:0 !important;
-				right:auto;
-			}
 		}
 		&.from-them {
 			position: relative;
@@ -157,21 +136,7 @@ $alert-list-height:45px;
                 -webkit-transform:scale(0.8);/*Chrome:10px*/
                 transform: scale(0.8);/*Chrome:10px*/
                 color: $color-master-5;
-			  }
-			.dropdown{
-				display: none;
-				position: absolute;
-				bottom: -2px;
-				right: -55px;
-				color: $color-master-6;
-				&:hover{
-					color: $color-master;
-				}
-			}
-			.dropdown-menu{
-				right:0 !important;
-				left: auto;
-			}
+		  	}
 		}
 		.chat-arrow-right{
 			position: absolute;
@@ -202,7 +167,7 @@ $alert-list-height:45px;
 */
 .activity{
 	.chat-bubble{
-		width:80%;
+		width:85%;
 	}
 }
 .chat-bubble{
@@ -265,10 +230,6 @@ $alert-list-height:45px;
 		border-bottom: 1px solid #ebebeb;
 		&:last-child{
 			border:none;
-		}
-		&.disabled{
-			opacity: .5;
-			cursor: not-allowed !important;
 		}
 		.img-cover{
 			border-radius: 8px;

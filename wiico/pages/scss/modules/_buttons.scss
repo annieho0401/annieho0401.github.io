@@ -214,7 +214,7 @@ Alternate buttons
         outline: none;
     }
     &.disabled, &[disabled]{
-        opacity: .35;
+        opacity: .5;
         cursor: not-allowed;
     }
 }

@@ -15,7 +15,7 @@ $assets-img-url:'../../assets/img/';
     }
     [data-action]{
         &.active:before{
-            // background-image: url('@{assets-img-url}/demo/tick.svg');
+            background-image: url('@{assets-img-url}/demo/tick.svg');
             width: 23px;
             height: 23px;
             content: '';
@@ -52,7 +52,7 @@ $assets-img-url:'../../assets/img/';
         &.btn-toggle-layout{
             &.active{
                 &:before{
-                    //  background-image: url('@{assets-img-url}/demo/tick.svg');
+                     background-image: url('@{assets-img-url}/demo/tick.svg');
                      width: 23px;
                      height: 23px;
                      content: '';

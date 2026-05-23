@@ -61,7 +61,7 @@ select,
 textarea {
     font-size: 14px;
     font-weight: normal;
-    line-height: 22px;
+    line-height: 20px;
 }
 
 input[type="radio"], 
@@ -211,9 +211,6 @@ form legend {
         min-height: 17px;
         margin-right: 15px;
         font-size: 13px;
-        &.opacity-none{
-            cursor: default;
-        }
         &:before{
             -webkit-box-sizing: inherit;
             box-sizing: border-box;
@@ -234,8 +231,7 @@ form legend {
     label {
         margin-bottom: 6px;
         &:before {
-            // bottom: 2.5px;
-            top: 2.5px;
+            bottom: 2.5px;
             border-radius: 99px;
             @include transition(border .3s 0s cubic-bezier(0.455, 0.030, 0.215, 1.330));
         }
@@ -262,7 +258,7 @@ form legend {
     }
     input[type=radio][disabled] {
         & + label {
-            opacity: 0.5;
+            opacity: 0.65;
         }
     }
 
@@ -305,7 +301,7 @@ input[type=radio]:checked + label:before{
         transition: border 0.2s linear 0s, color 0.2s linear 0s;
         // white-space: nowrap;
         &:before {
-            top: 2.5px;
+            top: 1.4px;
             border-radius: 3px;
             transition: border 0.2s linear 0s, color 0.2s linear 0s;
         }
@@ -315,17 +311,12 @@ input[type=radio]:checked + label:before{
             height: 16px;
             position: absolute;
             left: 3.5px;
-            top: 0.5px;
+            top: 0px;
             font-size: 11px;
             transition: border 0.2s linear 0s, color 0.2s linear 0s;
         }
         &:after {
             border-radius: 3px;
-        }
-    }
-    label.left-0{
-        &::after {
-            left:0;
         }
     }
     input[type=checkbox] {
@@ -378,13 +369,6 @@ input[type=radio]:checked + label:before{
             opacity: 0.4;
             &:before {
                 background-color: #eceff3;
-            }
-        }
-        & + label {
-            &.opacity-none {
-                &:before {
-                    background-color: #fff;
-                }
             }
         }
     }
@@ -600,7 +584,7 @@ input[type=checkbox]:checked + label{
 .form-group {
     margin-bottom: 10px;
     label:not(.error){
-        font-family: "微軟正黑體", "Segoe UI", Arial, sans-serif;
+        font-family:"微軟正黑體", 'Montserrat';
         font-size: 10.5px;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -1636,27 +1620,6 @@ https://github.com/Waxolunist/bootstrap3-wysihtml5-bower
     &-html {
         background-position: -440px 0;
     }
-}
-
-.input-group{
-    .sort-editor{
-        display: none;
-        position: absolute;
-        top: 5px;
-        left: 0px;
-    }
-    &:hover{
-        .sort-editor{
-            display: inline-block;
-        }
-    }
-}
-.input-img{
-    width: 33px;
-    height: 72px;
-    float: left;
-    background-color: #ededed;
-    margin: -10px;
 }
 
 /* Summernote

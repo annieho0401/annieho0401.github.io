@@ -242,21 +242,6 @@ body {
         border-bottom: 1px solid $color-grey-d;
     }
 }
-.header3{
-    position: fixed;
-    width: 100%;
-    top:48px;
-    z-index: 599;
-    background-color: $color-white;
-    border-bottom: 1px solid $color-grey-d;
-    .progress{
-        position: absolute;
-        top: 12px;
-        right: 15px;
-        width: calc(100% - 140px);
-        height: 8px;
-    }
-}
 @keyframes wave {
 	0% {
 		transform: rotate(0deg);
@@ -1437,11 +1422,6 @@ body {
         width: calc(100% - 180px);
         margin:15px 10px 0 10px;
         vertical-align: top;
-        p{
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap; 
-        }
     }
 }
 /* Breadcrumbs
@@ -1987,7 +1967,7 @@ padding-right: 30px;
                             position: absolute;
                             height: 1px;
                             top: $navbar-width + 7px;
-                            width: calc(100% - #{$menu-padding} * 2);
+                            width: calc(100% - $menu-padding * 2);
                             background-color: $form-control-border-color;
                         }
                         & > li{
