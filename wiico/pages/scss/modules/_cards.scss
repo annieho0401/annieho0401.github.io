@@ -101,6 +101,10 @@
         &:hover{
             background-color: rgba($color-master-lightest, .1);
         }
+        &.disabled{
+            opacity: .5;
+            cursor: not-allowed !important;
+        }
         .sparkline-info{
             margin-top:0;
             text-align: center;
@@ -112,10 +116,11 @@
             width:24px;
         }
         .status-col{
-            .col-6,.col-12{
+            .col-4,.col-6,.col-12{
                 background-color: $color-master-lightest;
-                &:first-child{
-                    border-right: 2px solid #fff;
+                border-right: 2px solid #fff;
+                &:last-child{
+                    border: none;
                 }
             }
         }
@@ -392,7 +397,10 @@
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.74, 0.27, 0.99);
     transition: all 0.3s cubic-bezier(0.05, 0.74, 0.27, 0.99); 
     &.fix-r-0{
-        right:0;
+        right:0 !important;
+    }
+    &.fix-r-285{
+        right:285px;
     }
     .card{
         box-shadow: 0 0 9px rgba(191, 191, 191, 0.4);
@@ -409,6 +417,11 @@
             width: calc(100% - 70px); 
         }
     }
+}
+
+.group-card{
+    margin-top:-2px;
+    width: calc(100% - 50px); 
 }
 
 .card-icon{

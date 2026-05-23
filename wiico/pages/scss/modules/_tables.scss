@@ -18,7 +18,7 @@
                 letter-spacing: 0.06em;
                 padding:14px 18px;
                 vertical-align: middle;
-                border-bottom: 1px solid fade-out($color-master-light, .3);
+                border-bottom: thin solid fade-out($color-master-light, .3);
                 color:fade-out($color-master-dark, .5);
                 border-top: none;
                 // &[class*='sorting_'] {
@@ -38,7 +38,7 @@
         tr {
             td {
                 background: $color-grey-l;
-                border-bottom: 1px solid fade-out($color-master-light, .3);
+                border-bottom: thin solid fade-out($color-master-light, .3);
                 border-top: 0px;
                 padding:20px;
                 font-size: 13.5px;
@@ -51,7 +51,7 @@
                     padding: 5px;
                     color: #62605a !important;
                     &:hover {
-                        background-color: $color-grey !important;
+                        background-color: rgba($color-grey, .5) !important;
                     }
                 }
                 // &[class*='sorting_'] {
@@ -66,6 +66,24 @@
                     position: absolute;
                     top: -7px;
                     left: -15px;
+                }
+                .list-sort-editor{
+                    display: none;
+                    cursor: pointer;
+                    float:left;
+                    width:10px;
+                    height: 40px;
+                    padding: 2px 10px;
+                    background-color: #fff;
+                }
+                .unit-label-editor{
+                    &:hover{
+                        margin-left:- 30px;
+                        width: calc(100% + 30px);
+                        .list-sort-editor{
+                            display: block !important;
+                        }
+                    }
                 }
                 .pin{
                     color: $color-success2;
@@ -90,21 +108,26 @@
             &.selected td {
                 background: $color-warning-lighter;
             }
+            &.table-bg-grey{
+                td{
+                    background: $color-grey;
+                }
+            }
         }
     }
     &.table-hover {
         tbody {
             tr {
                 &:hover td {
-                    background-color: $color-grey !important;
+                    opacity: .8;
                     &.table-empty{
                         cursor: default !important;
-                        background: $color-grey-l !important;
+                        opacity: 1 !important;
                     }
                 }
-                &.selected:hover td{
-                    background: $color-success-lighter !important;
-                }
+                // &.selected:hover td{
+                //     background: $color-success-lighter !important;
+                // }
             }
         }
     }
@@ -287,6 +310,12 @@
     .sticky-bottom.sticky-left, .sticky-bottom.sticky-left-64,{
         z-index: 1100;
     }
+    th.sticky-left.sticky-line{
+        box-shadow: inset -1px -1px 0 fade-out($color-master-light, .3) !important;
+    }
+    .sticky-left.sticky-line{
+        box-shadow: inset -1px 0 0 fade-out($color-master-light, .3) !important;
+    }
 
 }
 .fht-table {
@@ -298,6 +327,8 @@
 */
 .table.dataTable{
     margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 .table.dataTable.no-footer{
     border: none;
@@ -561,15 +592,18 @@ table.dataTable thead{
   .panel-collapse{
     .unit-label{
        width: 100%;
-       background-color: $color-grey;
+       background-color: rgba($color-success-light, .4);
        &:hover{
          opacity: .8;
        }
        &.hide{
-         opacity:.5;
+         opacity:.45;
          &:hover{
-           opacity: .3;
+           opacity: .35;
          }
+       }
+       &.bg-grey{
+           background-color: $color-grey !important;
        }
        .icon-thumbnail{
            float:none;
@@ -609,8 +643,14 @@ table.dataTable thead{
 }
 
 tr{
-    &.table-hide{
-        opacity: .5;
+    &.table-hide, &.table-disabled{
+        color: rgba($color-master, .4) !important;
+        .btn-link{
+            color: $color-master-5 !important;
+        }
+    }
+    &.table-disabled{
+        cursor: not-allowed !important;
     }
 }
 

@@ -734,8 +734,11 @@
         padding-bottom: 99999px;
       }
     }
+}
+
+@media (max-width:1199px){
     .header2, .page-container{
-        padding-right: 285px; 
+        padding-right: 0; 
     }
 }
 
@@ -745,6 +748,7 @@
         display: block!important;
     }
 }
+
 
 @media (min-width:992px){
     .row-same-height{
@@ -763,14 +767,12 @@
     }
 }
 
-@media (min-width: 1199px) {
-    .card-upload{
-        right:285px;
-    }
-}
 
 @media (min-width:768px){    
     .header2{
+        top:60px;
+    }
+    .header3{
         top:60px;
     }
     .quickview-wrapper{
@@ -863,6 +865,15 @@
     }
     .visible-sm-inline-block {
         display: inline-block!important;
+    }
+    .group-card{
+        width: calc(100% - 10px); 
+    }
+    .md-no-padding{
+        padding:0 !important;
+    }
+    .md-no-margin{
+        margin:0 !important;
     }
     //New Screen Prefix padding and margin
     @include generate-paddings-options-prefix("md",3);
@@ -1083,7 +1094,7 @@
         .sticky-right,
         .sticky-left,
         .sticky-left-48,
-        .sticky-left-56{
+        .sticky-left-64{
             position: static;
         }
     }

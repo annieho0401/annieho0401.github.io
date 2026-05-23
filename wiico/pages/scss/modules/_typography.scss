@@ -265,6 +265,9 @@ hr{
 .no-decoration{
     text-decoration:none !important;
 }
+.spacing-normal{
+    letter-spacing: normal;
+}
 /* Monochrome Colors
 ------------------------------------
  */
@@ -479,7 +482,7 @@ hr{
     color: $color-master !important;
 }
 .text-grey{
-    color: $color-master-7 !important;
+    color: $color-master-6 !important;
 }
 .text-master-light{
     color: $color-master-light !important;
@@ -492,6 +495,9 @@ hr{
 }
 .text-complete{
     color: $color-complete !important;
+}
+.text-complete-dark{
+    color: $color-complete2 !important;
 }
 .text-success {
     color: $color-success !important;

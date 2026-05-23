@@ -58,9 +58,9 @@
 				border-color: $color-grey-d;
 			}
 		}
-		.col-12>.card{
-			margin-bottom:0 !important;
-		}
+		// .col-12>.card{
+		// 	margin-bottom:0 !important;
+		// }
 	}
 	.modal-footer {
 	    border-top: none;
@@ -180,11 +180,16 @@
 			// 	}
 			// }
 			&.show{
-				background-color: rgba(255, 255, 255, 0.85);
+				background-color: rgba(0, 0, 0, 0.75);
+				// background-color: rgba(255, 255, 255, 0.85);
 	  			.modal-dialog{
 	  				opacity: 1;
 					@include scale(1);
 				}
+			}
+			.pg-close{
+				font-size: 24px !important;
+				color: white;
 			}
 			.modal-dialog{
 				opacity: 0;
